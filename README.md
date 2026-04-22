@@ -1,74 +1,50 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 # e-commerce-store
+
+E-commerce website built with React and TypeScript. Styled with tailwindCSS.
+
+## Table of contents
+
+- [Project Highlights](#project-highlights)
+  - [Features](#features) -[Tech Stack](#tech-stack)
+  - [Links](#links)
+- [Getting Started](#getting-started)
+- [API](#api)
+
+## Project Highlights
+
+### Features
+
+- API integration using DummyJSON and Error handling
+- Implementing search, filter and sort functionality
+- Showing product details with View Details button
+- State management of Favorites using Context API, enabling add and remove from favorites functionality
+- State management of Cart using Context API enabling add, delete, increase and decarease functionality
+- Persiting Cart and Favorite items with localstorage
+- Managing Cart, Checkout, and Product Details Modal visibility based on user's progress
+- Responsive UI built using Tailwind CSS and CSS
+- Semantic HTML and mobile-first workflow
+- Changing styles for header on scroll
+
+### Tech Stack
+
+- React
+- TypeScript
+- CSS and Tailwind CSS
+- React Router (v6)
+- Node.js
+- npm package manager
+
+### Links
+
+- Solution URL: [Git](https://github.com/shruticodes01/e-commerce-store.git)
+
+## Getting Started
+
+git clone https://github.com/shruticodes01/e-commerce-store.git
+cd e-commerce-store
+npm install
+npm run dev
+
+## API
+
+DummyJSON: [DummyJSON](https://dummyjson.com/products)

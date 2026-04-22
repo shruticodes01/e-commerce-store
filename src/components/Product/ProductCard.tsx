@@ -29,9 +29,7 @@ export default function ProductCard({
 
   const viewProductDetails = (product: ProductDataObj) => {
     showProductDetails();
-    console.log(product);
     onShowDetails(product);
-    console.log(onShowDetails(product));
   };
 
   const isFavorite = favorites.some((item) => item.id === product.id);

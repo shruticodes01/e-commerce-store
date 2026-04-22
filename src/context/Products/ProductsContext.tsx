@@ -43,7 +43,6 @@ export function ProductContextProvider({
         if (!response.ok) throw new Error("Failed to fetch data!");
 
         const data = await response.json();
-        console.log(data.products);
 
         setProducts(data.products);
       } catch (err) {
@@ -62,9 +61,13 @@ export function ProductContextProvider({
 
   const addToFavorite = (product: ProductDataObj) => {
     setFavorites((prev) => {
+      // check if there is atleast one item in the favorites whose id equals product.id
+      // if yes, returns true else returns false
       return prev.some((item) => item.id === product.id)
         ? prev.filter((item) => item.id !== product.id)
-        : [...prev, product];
+        : // if true, remove it
+          [...prev, product];
+      //if false, add it to favorites
     });
   };
 
