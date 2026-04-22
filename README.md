@@ -42,6 +42,11 @@ E-commerce website built with React and TypeScript. Styled with tailwindCSS.
 ## Project Structure
 
 ```tree
+SRC
+│   App.css
+│   App.tsx
+│   index.css
+│   main.tsx
 │
 ├───assets
 │   │   logo_bg_black.png
@@ -132,6 +137,7 @@ E-commerce website built with React and TypeScript. Styled with tailwindCSS.
 └───utils
         calcOriginalPrice.ts
         formatting.ts
+
 ```
 
 ## Getting started
