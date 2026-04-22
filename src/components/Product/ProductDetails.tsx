@@ -45,7 +45,7 @@ export default function ProductDetails({
           className="flex flex-col gap-2 overflow-y-scroll"
           key={selectedProduct.id}
         >
-          <div className="flex items-center gap-8">
+          <div className="flex items-center max-md:gap-4 md:gap-8">
             <Button
               className="shrink-0 self-baseline-last"
               variant="icon"
