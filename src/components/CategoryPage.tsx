@@ -106,7 +106,7 @@ export default function CategoryPage({ categoryID }: { categoryID: string }) {
             className={`max-sm:h-100 aspect-video object-cover object-center"`}
             id="banner-img"
             src={bannerImg}
-            alt="toy shopping cart"
+            alt="banner-img"
           />
           <div className="absolute inset-0 bg-black/45"></div>
 
