@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-pink: hsl(349, 100%, 78%);
+  /* #FF8DA1 rgb(255,141,161)*/
+  --color-mint-blue: hsl(169, 100%, 78%);
+  /*#8DFFEB rgb(141,255,235)*/
+  --color-powderedBlue: hsl(207, 64%, 45%);
+  /*#2A7BBE, rgb(42,123,190)*/
+
+  --color-dusty-pink: hsl(359, 61%, 85%);
+  /*#F0C1C2 rgb(240, 193, 194)*/
+  --color-light-gray: hsl(60, 28%, 92%);
+  /*#F1F1E6 rgb(241, 241, 230)*/
+  --color-light-coral: hsl(20, 93%, 89%);
+  /*#FDD9C7 rgb(253, 217, 199)*/
+  --color-matcha: hsl(63, 35%, 66%);
+  /*#C4C78C rgb(196, 199, 140)*/
+
+  --animate-slide-in-from-top: fade-slide-in-from-top 0.3s ease-in-out;
+
+  @keyframes fade-slide-in-from-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-slide-in-from-right: fade-slide-in-from-right 0.3s ease-in-out;
+
+  @keyframes fade-slide-in-from-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+
+/* CSS Reset*/
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/*  Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/**/
+
+#modal::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+@media(max-width:48rem) {
+
+  .desktop__header {
+    display: none;
+  }
+}
+
+@media(min-width:48rem) {
+  .mobile__header {
+    display: none;
+  }
+
+  .desktop__header {
+    display: flex;
+  }
+}
