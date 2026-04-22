@@ -55,7 +55,7 @@ export default function DesktopHeader({
         >
           <li>
             <NavLink
-              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
               role="menu-item"
               to="/"
             >
@@ -64,7 +64,7 @@ export default function DesktopHeader({
           </li>
           <li>
             <NavLink
-              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
               role="menu-item"
               to="/beauty"
             >
@@ -73,7 +73,7 @@ export default function DesktopHeader({
           </li>
           <li>
             <NavLink
-              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
               role="menu-item"
               to="/fragrances"
             >
@@ -82,7 +82,7 @@ export default function DesktopHeader({
           </li>
           <li>
             <NavLink
-              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
               role="menu-item"
               to="/furniture"
             >
@@ -91,7 +91,7 @@ export default function DesktopHeader({
           </li>
           <li>
             <NavLink
-              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+              className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
               role="menu-item"
               to="/groceries"
             >
@@ -102,7 +102,7 @@ export default function DesktopHeader({
           <ul className="flex items-center gap-6">
             <li className="relative">
               <NavLink
-                className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+                className={`hover:scale-105 focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
                 role="menu-item"
                 to="/favorite-products"
               >
@@ -111,19 +111,19 @@ export default function DesktopHeader({
                     totalFavoriteItems > 0 ? "fill-red-500" : "fill-transparent"
                   }
                 />
-                <span className="absolute -top-3 -right-4 px-2 bg-black text-mint-blue rounded-full">
+                <span className="absolute -top-2 -right-4 px-2 bg-black text-mint-blue rounded-full">
                   {totalFavoriteItems}
                 </span>
               </NavLink>
             </li>
             <li className="relative">
               <Button
-                className={` focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-mint-blue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-powderedBlue focus-visible:text-mint-blue active:text-mint-blue"}`}
+                className={` focus:outline-0 focus-visible:outline-3 focus-visible:outline-offset-4 ${isScrolled ? "hover:text-powderedBlue focus-visible:outline-powderedBlue focus-visible:text-powderedBlue active:text-powderedBlue" : "hover:text-mint-blue focus-visible:outline-blue-100 focus-visible:text-mint-blue active:text-mint-blue"}`}
                 role="menu-item"
                 onClick={() => showCart()}
               >
                 <ShoppingBag />
-                <span className="absolute -top-3 -right-4 px-2 bg-black text-mint-blue rounded-full">
+                <span className="absolute -top-2 -right-4 px-2 bg-black text-mint-blue rounded-full">
                   {totalCartItems}
                 </span>
               </Button>
