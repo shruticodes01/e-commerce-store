@@ -40,10 +40,26 @@ E-commerce website built with React and TypeScript. Styled with tailwindCSS.
 
 ## Getting Started
 
+## Getting started
+
+Clone the repository:
+
+```bash
 git clone https://github.com/shruticodes01/e-commerce-store.git
 cd e-commerce-store
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Run the development server:
+
+```bash
 npm run dev
+```
 
 ## API
 
