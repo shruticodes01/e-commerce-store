@@ -128,7 +128,7 @@ export default function MobileHeader({
           </li>
           <li className={`p-4`}>
             <NavLink
-              className={`hover:scale-105 hover:text-powderedBlue focus:outline-0 focus-visible:outline-3 focus-visible:outline-mint-blue focus-visible:outline-offset-4 focus-visible:text-powderedBlue active:text-powderedBlue`}
+              className={`hover:scale-105 hover:text-powderedBlue focus:outline-0 focus-visible:outline-3 focus-visible:outline-mint-blue focus-visible:outline-offset-4 focus-visible:text-powderedBlue active:text-powderedBlue relative`}
               role="menuitem"
               to="/favorite-products"
               onClick={() => {
@@ -136,11 +136,10 @@ export default function MobileHeader({
               }}
             >
               <Heart
-                className={
-                  totalCartItems > 0 ? "fill-red-500" : "fill-transparent"
-                }
+                className={`w-8 h-8
+                  ${totalFavoriteItems > 0 ? "fill-red-500" : "fill-transparent"}`}
               />
-              <span className="absolute -top-3 -right-4 px-2 bg-black text-mint-blue rounded-full">
+              <span className="absolute -top-2 -right-10 px-2 bg-black text-mint-blue rounded-full">
                 {totalFavoriteItems}
               </span>
             </NavLink>

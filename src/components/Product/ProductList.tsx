@@ -3,6 +3,7 @@ import { card } from "../../styles/global.ts";
 import ProductCard from "./ProductCard.tsx";
 import type { ProductDataObj } from "../../types/types.ts";
 import ProductDetails from "./ProductDetails.tsx";
+import { useUserProgress } from "../../context/UserProgress/useUserProgress.ts";
 
 export default function ProductList({
   products,
@@ -13,12 +14,14 @@ export default function ProductList({
   favorites: ProductDataObj[];
   addToFavorite: (product: ProductDataObj) => void;
 }) {
+  const { showProductDetails } = useUserProgress();
   const [selectedProduct, setSelectedProduct] = useState<ProductDataObj | null>(
     null,
   );
 
   const showSelectedProductDetails = (product: ProductDataObj) => {
     setSelectedProduct(product);
+    showProductDetails();
   };
 
   return (

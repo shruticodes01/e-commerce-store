@@ -104,7 +104,7 @@ export default function CategoryPage({ categoryID }: { categoryID: string }) {
       <section className="w-full overflow-hidden" id={categoryID}>
         <div className="w-full flex relative" key={categoryID}>
           <img
-            className="w-full max-h-126 object-cover object-center"
+            className={`"w-full max-md:h-108 md:max-h-126 object-cover object-center"`}
             id="banner-img"
             src={bannerImg}
             alt="toy shopping cart"
@@ -123,7 +123,7 @@ export default function CategoryPage({ categoryID }: { categoryID: string }) {
           <SortProducts sortBy={sortBy} onSort={handleSort} />
         </div>
       </section>
-      <Container className="pt-10 md:pt-20">
+      <Container className="pt-10 md:pt-20 pb-4">
         <section>
           <h2 className={`${typography.heading}`}>
             {selectedCategory

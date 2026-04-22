@@ -73,7 +73,7 @@ export default function ProductCard({
         </p>
         <div className={`flex justify-between items-center`}>
           <Button
-            className={``}
+            className={`px-2 py-1 md:px-2.5 md:py-1.5`}
             variant="addItem"
             label="Add To Cart"
             onClick={handleAddToCart}

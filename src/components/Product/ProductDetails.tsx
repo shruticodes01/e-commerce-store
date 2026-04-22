@@ -36,7 +36,7 @@ export default function ProductDetails({
 
   return (
     <Modal
-      className="max-w-[80%] py-6 px-8 mx-auto my-auto animate-slide-in-from-right"
+      className="max-md:max-w-[90%] md:max-w-[80%] py-6 px-8 mx-auto my-auto animate-slide-in-from-right"
       open={progress === "product-details"}
       onClose={handleClose}
     >
@@ -46,8 +46,12 @@ export default function ProductDetails({
           key={selectedProduct.id}
         >
           <div className="flex items-center gap-8">
-            <Button variant="icon" onClick={handleClose}>
-              <ArrowLeft />
+            <Button
+              className="shrink-0 self-baseline-last"
+              variant="icon"
+              onClick={handleClose}
+            >
+              <ArrowLeft className="max-md:w-6 max-md:h-6 md:w-8 md:h-8 " />
             </Button>
             <h2 className="text-2xl font-semibold">{selectedProduct.title}</h2>
           </div>
@@ -108,14 +112,14 @@ export default function ProductDetails({
 
           <div className="w-full flex justify-center py-2">
             <Button
-              className={`w-full max-w-[40%]`}
+              className={`w-full max-w-[40%] px-4 py-2 md:px-6 md:py-3 text-nowrap`}
               variant="addItem"
               label="Add To Cart"
               onClick={handleAddToCart}
             />
           </div>
 
-          <div>
+          <div className="mb-2">
             <p className="text-gray-600">
               Returns:{" "}
               <span className="text-powderedBlue">
@@ -136,7 +140,7 @@ export default function ProductDetails({
             </p>
           </div>
 
-          <div className="py-2 px-4 bg-light-gray rounded-md">
+          <div className="p-4 bg-light-gray rounded-md">
             <h3 className="text-xl font-semibold">Product Details</h3>
             <ul className="py-4">
               <li>
@@ -211,23 +215,25 @@ export default function ProductDetails({
           <div className="py-2">
             <h3 className="text-xl font-semibold">Customer Reviews</h3>
             <ul className="flex flex-col gap-4 py-4">
-              {selectedProduct.reviews.map((review: ReviewsObj) => {
-                return (
-                  <li>
-                    <div className="flex items-center gap-1">
-                      <User />{" "}
-                      <p className="font-bold">{review.reviewerName}</p>
-                    </div>
-                    <p className="text-gray-600 text-sm">
-                      {`Product: ${selectedProduct.title} reviewed on ${review.date}`}
-                    </p>
+              {selectedProduct.reviews.map(
+                (review: ReviewsObj, index: number) => {
+                  return (
+                    <li key={index}>
+                      <div className="flex items-center gap-1">
+                        <User />{" "}
+                        <p className="font-bold">{review.reviewerName}</p>
+                      </div>
+                      <p className="text-gray-600 text-sm">
+                        {`Product: ${selectedProduct.title} reviewed on ${review.date}`}
+                      </p>
 
-                    <Rating rating={review.rating} showLabel={false} />
+                      <Rating rating={review.rating} showLabel={false} />
 
-                    <p>{review.comment}</p>
-                  </li>
-                );
-              })}
+                      <p>{review.comment}</p>
+                    </li>
+                  );
+                },
+              )}
             </ul>
           </div>
         </div>

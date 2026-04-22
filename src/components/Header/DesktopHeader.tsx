@@ -108,7 +108,7 @@ export default function DesktopHeader({
               >
                 <Heart
                   className={
-                    totalCartItems > 0 ? "fill-red-500" : "fill-transparent"
+                    totalFavoriteItems > 0 ? "fill-red-500" : "fill-transparent"
                   }
                 />
                 <span className="absolute -top-3 -right-4 px-2 bg-black text-mint-blue rounded-full">

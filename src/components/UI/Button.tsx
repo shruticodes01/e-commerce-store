@@ -1,9 +1,8 @@
 import type { ButtonProps } from "../../types/types.ts";
-import { buttonSize, buttonVariants } from "../../styles/global.ts";
+import { buttonVariants } from "../../styles/global.ts";
 
 export default function Button({
   variant = "primary",
-  size = "md",
   label,
   icon,
   children,
@@ -16,7 +15,7 @@ export default function Button({
 
   return (
     <button
-      className={`${baseClasses} ${buttonVariants[variant]} ${buttonSize[size]} ${className}`}
+      className={`${baseClasses} ${buttonVariants[variant]} ${className}`}
       onClick={onClick}
       {...props}
     >

@@ -54,20 +54,13 @@ export const buttonVariants = {
   text: "",
   icon: "",
   addItem:
-    "bg-powderedBlue text-light-gray hover:bg-mint-blue/60 hover:text-black focus-visible:ring-pink rounded-lg px-2 py-1 sm:px-2 sm:py-1 text-sm sm:text-base transition-colors duration-200 ease-in-out shadow-md cursor-pointer",
+    "bg-powderedBlue text-light-gray text-sm sm:text-base hover:bg-mint-blue/60 hover:text-black focus-visible:ring-pink rounded-lg transition-colors duration-200 ease-in-out shadow-md cursor-pointer",
   removeItem: "",
   viewDetails:
     "bg-white text-black border-transparent hover:rounded-lg hover:outline-2 hover:outline-powderedBlue px-2 py-1 sm:px-2 sm:py-1 text-sm sm:text-base transition-colors duration-200 ease-in-out cursor-pointer",
 };
 
 /* Styles based on button sizes */
-export const buttonSize = {
-  xs: "px-2 py-1 text-xs sm:px-2 sm:py-1.5 md:px-2 md:py-2",
-  sm: "px-2 py-1 text-sm sm:px-2 sm:py-1.5 md:px-2 md:py-2",
-  md: "text-base",
-  lg: "px-2 py-1 text-lg sm:px-2 sm:py-3 md:px-2 md:py-3.5",
-  xl: "px-3 py-2 text-xl sm:px-3 sm:py-4 md:px-3 md:py-4.5",
-};
 
 // // Sizes usable across components (buttons, inputs, badges, etc.)
 // export const sizes = {
