@@ -17,14 +17,14 @@ export default function CartItem({
   return (
     <li className="flex justify-between items-baseline-last">
       <p className="flex gap-2 items-center">
-        <span className="text-nowrap">{item.name} </span> -
+        <span className="md:text-nowrap font-semibold">{item.title} </span> -
         <span>{item.quantity}</span> x
         <span>{currencyFormatter.format(item.price)}</span>
       </p>
       <div className="w-full flex gap-2 justify-end">
         <Button
           variant="text"
-          className="p-1 rounded-full bg-black text-mint-blue"
+          className="p-1 rounded-full bg-black text-mint-blue shrink-0"
           onClick={onDecrease}
         >
           <Minus className="w-5 h-5" />
@@ -32,12 +32,16 @@ export default function CartItem({
         <span>{item.quantity}</span>
         <Button
           variant="text"
-          className="p-1 rounded-full bg-black text-mint-blue"
+          className="p-1 rounded-full bg-black text-mint-blue shrink-0"
           onClick={onIncrease}
         >
           <Plus className="w-5 h-5" />
         </Button>
-        <Button variant="icon" className="text-red-700" onClick={onDelete}>
+        <Button
+          variant="icon"
+          className="text-red-700 shrink-0"
+          onClick={onDelete}
+        >
           <Trash2 className="w-5 h-5" />
         </Button>
       </div>

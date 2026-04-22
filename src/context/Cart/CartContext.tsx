@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import type {
   CartContextType,
   ItemObj,
@@ -19,8 +19,12 @@ export function CartContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [cart, setCart] = useState<{ items: ItemObj[] }>({
-    items: [],
+  const [cart, setCart] = useState<{ items: ItemObj[] }>(() => {
+    const saved = localStorage.getItem("cart");
+    if (saved) {
+      return { items: JSON.parse(saved) };
+    }
+    return { items: [] };
   });
 
   const addToCart = (product: ProductDataObj) => {
@@ -93,14 +97,16 @@ export function CartContextProvider({
     });
   };
 
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart.items));
+  }, [cart.items]);
+
   const cartContext = {
     items: cart.items,
     addToCart,
     removeFromCart,
     deleteFromCart,
   };
-
-  console.log(cartContext);
 
   return (
     <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>

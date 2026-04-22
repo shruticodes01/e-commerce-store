@@ -23,7 +23,7 @@ export default function Cart() {
 
   return (
     <Modal
-      className="max-w-[60%] bg-pink-50 mx-auto my-auto p-6 animate-slide-in-from-top"
+      className="max-md:max-w-[95%] md:max-w-[60%] bg-pink-50 mx-auto my-auto p-6 animate-slide-in-from-top"
       open={progress === "cart"}
       onClose={progress === "cart" ? handleCloseCart : null}
     >

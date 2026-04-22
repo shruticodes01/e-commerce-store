@@ -71,6 +71,7 @@ export function ProductContextProvider({
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify([...favorites]));
   }, [favorites]);
+
   const productCtx = {
     products,
     loading,

@@ -48,7 +48,7 @@ export default function Checkout() {
 
   return (
     <Modal
-      className="max-w-[50%] p-4 mx-auto my-auto animate-slide-in-from-right"
+      className="max-md:max-w-[95%] md:max-w-[50%] p-4 mx-auto my-auto animate-slide-in-from-right"
       open={progress === "checkout"}
       onClose={handleClose}
     >

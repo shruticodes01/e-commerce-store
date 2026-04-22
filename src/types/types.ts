@@ -15,7 +15,6 @@ export type ButtonVariant =
   | "text"
   | "icon"
   | "addItem"
-  | "removeItem"
   | "viewDetails";
 
 export type ButtonSize = "sm" | "md" | "lg" | "xl";

@@ -56,7 +56,7 @@ export default function ProductCard({
       </div>
       <div className={card.content}>
         <h3 className={`${card.title}`}>{product.title}</h3>
-        <p className={`${card.description}`}>{product.description}</p>
+        <p className={`${card.description} py-1`}>{product.description}</p>
         <div className={card.priceRatingContainer}>
           <p className={`${card.price}`}>
             {currencyFormatter.format(product.price)}
