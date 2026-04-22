@@ -3,13 +3,15 @@ import type { SortProps } from "../types/types";
 export default function SortProducts({ sortBy, onSort }: SortProps) {
   return (
     <div
-      className={`w-full h-10 flex justify-end items-center gap-4 px-2`}
+      className={`w-full h-10 flex items-center gap-4 px-2 outline-1 outline-blue-100 rounded-lg max-w-fit`}
       id="search-wrapper"
     >
-      <label htmlFor="sort">Sort By:</label>
+      <label htmlFor="sort" className="text-nowrap font-semibold">
+        Sort By:
+      </label>
 
       <select
-        className="w-full max-w-50 h-full bg-white rounded-sm p-2"
+        className="w-full max-w-35 h-full bg-white rounded-sm p-2"
         id="sort"
         name="sort"
         value={sortBy}

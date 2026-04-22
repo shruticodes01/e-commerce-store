@@ -6,7 +6,6 @@
   --color-mint-blue: hsl(169, 100%, 78%);
   /*#8DFFEB rgb(141,255,235)*/
 
-
   --color-powderedBlue: hsl(207, 64%, 45%);
   /*#2A7BBE, rgb(42,123,190)*/
 
@@ -15,14 +14,10 @@
   --color-light-coral: hsl(20, 93%, 89%);
   /*#FDD9C7 rgb(253, 217, 199)*/
 
-  /* --color-blue-100: hsl(199, 100%, 78%); */
-  /* #8ddaff rgb(141,218,255) */
-
   --color-blue-100: hsl(193, 47%, 72%);
   /*#96cad9 rgb(150,202,217)*/
 
-  /* --color-blue-100: hsl(226, 100%, 67%); */
-  /*#5980ff rgb(89,128,255)*/
+
 
 
   --animate-slide-in-from-top: fade-slide-in-from-top 0.3s ease-in-out;

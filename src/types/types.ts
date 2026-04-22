@@ -89,6 +89,7 @@ export interface SearchProps {
   selectedCategory: string;
   onSearch: (e: ChangeEvent<HTMLInputElement>) => void;
   onCategoryChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+  showCategorySelect: boolean;
 }
 
 export interface CartContextType {

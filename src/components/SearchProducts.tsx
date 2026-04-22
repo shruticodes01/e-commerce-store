@@ -7,6 +7,7 @@ export default function SearchProducts({
   selectedCategory,
   onSearch,
   onCategoryChange,
+  showCategorySelect,
 }: SearchProps) {
   return (
     <>
@@ -27,18 +28,20 @@ export default function SearchProducts({
           <Search className="absolute top-2 right-2" />
         </div>
 
-        <select
-          className="w-full max-w-50 h-full bg-white rounded-sm p-2"
-          name="search-categories"
-          value={selectedCategory}
-          onChange={onCategoryChange}
-        >
-          <option value="">All Categories</option>
-          <option value="beauty">Beauty</option>
-          <option value="fragrances">Fragrances</option>
-          <option value="furniture">Furniture</option>
-          <option value="groceries">Groceries</option>
-        </select>
+        {showCategorySelect && (
+          <select
+            className="w-full max-w-50 h-full bg-white rounded-sm p-2"
+            name="search-categories"
+            value={selectedCategory}
+            onChange={onCategoryChange}
+          >
+            <option value="">All Categories</option>
+            <option value="beauty">Beauty</option>
+            <option value="fragrances">Fragrances</option>
+            <option value="furniture">Furniture</option>
+            <option value="groceries">Groceries</option>
+          </select>
+        )}
       </div>
     </>
   );
